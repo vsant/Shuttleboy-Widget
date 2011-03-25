@@ -113,10 +113,10 @@ function prettyPrint(divID, title, arr)
       if (hms[0] > 12)
         hms[0] -= 12;
 
-      // Eval the hour to make 01 -> 1
+      // Turn 01 -> 1 w/parseInt (specify base, else it uses base 8 b/c of preceding '0')
       /* Build an entire <span>...</span> tag b/c inserting it in pieces will
          cause it to not be eval'ed by the browser's CSS parser. */
-      appendToDiv(divID, "<span class='" + clr + "'>" + till + " (" + eval(hms[0]) + ':' + hms[1] + ampm + ")<\/span>");
+      appendToDiv(divID, "<span class='" + clr + "'>" + till + " (" + parseInt(hms[0], 10) + ':' + hms[1] + ampm + ")<\/span>");
     }
     appendToDiv(divID,"<br/>\n");
   }
