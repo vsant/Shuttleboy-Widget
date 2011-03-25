@@ -1,3 +1,8 @@
 Shuttleboy Widget (Mac widget that displays Harvard shuttle timings)
 Vivek Sant
 vsant@hcs.harvard.edu
+
+To push a widget update, modify:
+  1) Info.plist (CFBundleVersion)
+  2) scripts.js (verCurr js var)
+  3) version.js (on the remote version server)
