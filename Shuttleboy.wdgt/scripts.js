@@ -2,7 +2,7 @@
    Vivek Sant
    vsant@hcs.harvard.edu */
 
-verCurr = "1.5";
+verCurr = "1.6";
 
 function toGar(arr)   { prettyPrint("d1", "to Garden",     arr); }
 function toMem(arr)   { prettyPrint("d2", "to MemHall",    arr); }
@@ -147,7 +147,10 @@ function refreshPage()
     head.appendChild(e);
   }
 
-  timer = setTimeout("refreshPage()", 20000);
+  // Refresh on the minute
+  var currDate = new Date();
+  var s = (60 - currDate.getSeconds()) * 1000;
+  timer = setTimeout("refreshPage()", s);
 }
 
 function unrefreshPage()
