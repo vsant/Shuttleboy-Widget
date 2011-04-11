@@ -2,7 +2,7 @@
    Vivek Sant
    vsant@hcs.harvard.edu */
 
-verCurr = "1.7";
+verCurr = "1.8";
 
 function toGar(arr)   { prettyPrint("d1", "to Garden",     arr); }
 function toMem(arr)   { prettyPrint("d2", "to MemHall",    arr); }
@@ -155,11 +155,16 @@ function refreshPage()
 
 function unrefreshPage()
 {
-  clearTimeout(timer);
+  if (timer != null)
+  {
+    clearTimeout(timer);
+    timer = null;
+  }
 }
 
 if (window.widget)
 {
-  widget.onshow = refreshPage;
-  widget.onhide = unrefreshPage;
+  widget.onshow   = refreshPage;
+  widget.onhide   = unrefreshPage;
+  widget.onremove = unrefreshPage;
 }
