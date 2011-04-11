@@ -2,7 +2,9 @@
    Vivek Sant
    vsant@hcs.harvard.edu */
 
-verCurr = "1.9";
+verCurr = "1.10";
+
+timers  = new Array();
 
 function toGar(arr)   { prettyPrint("d1", "to Garden",     arr); }
 function toMem(arr)   { prettyPrint("d2", "to MemHall",    arr); }
@@ -150,16 +152,14 @@ function refreshPage()
   // Refresh on the minute
   var currDate = new Date();
   var s = (60 - currDate.getSeconds()) * 1000;
-  timer = setTimeout("refreshPage()", s);
+  var timer = setTimeout("refreshPage()", s);
+  timers.push(timer);
 }
 
 function unrefreshPage()
 {
-  if (timer != null)
-  {
-    clearTimeout(timer);
-    timer = null;
-  }
+  while (timers.length != 0)
+    clearTimeout(timers.pop());
 }
 
 if (window.widget)
