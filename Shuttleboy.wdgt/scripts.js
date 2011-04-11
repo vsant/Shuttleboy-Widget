@@ -2,7 +2,7 @@
    Vivek Sant
    vsant@hcs.harvard.edu */
 
-verCurr = "1.6";
+verCurr = "1.7";
 
 function toGar(arr)   { prettyPrint("d1", "to Garden",     arr); }
 function toMem(arr)   { prettyPrint("d2", "to MemHall",    arr); }
