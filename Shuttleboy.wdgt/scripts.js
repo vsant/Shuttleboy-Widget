@@ -124,12 +124,12 @@ function prettyPrint(divID, title, arr)
 
 function refreshPage()
 {
-  var urls = ["http://shuttleboy.cs50.net/api/1.1/trips?output=jsonp&a=Quad&b=Mass+Ave+Garden+St&callback=toGar",
-              "http://shuttleboy.cs50.net/api/1.1/trips?output=jsonp&a=Quad&b=Memorial+Hall&callback=toMem",
-              "http://shuttleboy.cs50.net/api/1.1/trips?output=jsonp&a=Quad&b=Mather+House&callback=toMat",
-              "http://shuttleboy.cs50.net/api/1.1/trips?output=jsonp&a=Boylston+Gate&b=Quad&callback=fromBoy",
-              "http://shuttleboy.cs50.net/api/1.1/trips?output=jsonp&a=Memorial+Hall&b=Quad&callback=fromMem",
-              "http://shuttleboy.cs50.net/api/1.1/trips?output=jsonp&a=Mather+House&b=Quad&callback=fromMat",
+  var urls = ["http://shuttleboy.cs50.net/api/1.2/trips?output=jsonp&a=Quad&b=Mass+Ave+Garden+St&callback=toGar",
+              "http://shuttleboy.cs50.net/api/1.2/trips?output=jsonp&a=Quad&b=Memorial+Hall&callback=toMem",
+              "http://shuttleboy.cs50.net/api/1.2/trips?output=jsonp&a=Quad&b=Mather+House&callback=toMat",
+              "http://shuttleboy.cs50.net/api/1.2/trips?output=jsonp&a=Boylston+Gate&b=Quad&callback=fromBoy",
+              "http://shuttleboy.cs50.net/api/1.2/trips?output=jsonp&a=Memorial+Hall&b=Quad&callback=fromMem",
+              "http://shuttleboy.cs50.net/api/1.2/trips?output=jsonp&a=Mather+House&b=Quad&callback=fromMat",
               "http://www.hcs.harvard.edu/vsant/shuttleboy/version.js?verCurr="+verCurr];
 
   head = document.getElementsByTagName("head")[0];
